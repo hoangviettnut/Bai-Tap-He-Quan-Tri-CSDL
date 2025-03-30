@@ -53,29 +53,4 @@ Diagram giữa các bảng sau khi sửa lại từ BTVN_02: ![image-2](https://
 ## 3. Viết lệnh truy vấn
 Bảng sau khi viết lệnh truy vấn: ![image-12](https://github.com/user-attachments/assets/849a70d7-8a27-4b15-8080-651646fda875)
 ### Code Truy vấn
-SELECT 
-    sv.MSSV,
-    sv.Hovaten AS TenSinhVien,
-    lhp.maLopHP,
-    lhp.TenLopHP,
-    mh.tenMon AS MonHoc,
-    gv.Hovaten AS TenGiaoVien,
-    d.diem AS DiemThanhPhan,
-    dkmh.DiemThi,
-    dkmh.PhanTramThi
-FROM 
-    SinhVien sv
-JOIN 
-    DKMH dkmh ON sv.MSSV = dkmh.MSSV
-JOIN 
-    Diem d ON dkmh.id_dk = d.id_dk
-JOIN 
-    LopHP lhp ON dkmh.maLopHP = lhp.maLopHP
-JOIN 
-    MonHoc mh ON lhp.maMon = mh.maMon
-JOIN 
-    GiaoVien gv ON lhp.maGV = gv.maGV
-WHERE 
-    (sv.MSSV = 'K1' AND lhp.maLopHP = 'LHP1')
-    OR (sv.MSSV = 'K2' AND lhp.maLopHP = 'LHP2')
-    OR (sv.MSSV = 'K3' AND lhp.maLopHP = 'LHP3');
+Từ dòng 312 trong file Code BTVN03.sql
